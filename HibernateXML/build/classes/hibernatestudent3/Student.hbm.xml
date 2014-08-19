@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hibernatestudent3" >
+    <class name="Student">
+        <id name="studentId" column="STUDENT_ID">
+            <generator class="native" />
+        </id>
+        <property name="matricNo" column="MATRIC_NUMBER" />
+        <property name="firstName" column="FIRST_NAME" />
+        <property name="surname" column="SURNAME" />
+        <property name="email"  />
+        <many-to-one name="programme" column="PROGRAMME_ID" not-null="false" cascade="all" />
+    </class>
+</hibernate-mapping>
